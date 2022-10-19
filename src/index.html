@@ -13,21 +13,17 @@
             <section id="display-scores">
                 <div id="recent">
                     <h2>Recent scores</h2>
-                    <button type="button">Refresh</button>
+                    <button type="button" id="refresh-btn">Refresh</button>
                 </div>
                 <div id="scores">
-                    <ul>
-                        <li class="list">Name: 100</li>
-                        <li class="list">Name: 30</li>
-                        <li class="list">Name: 10</li>
-                        <li class="list">Name: 500</li>
-                        <li class="list">Name: 900</li>
+                    <ul id="all-scores">
+                        
                     </ul>
                 </div>
             </section>
             <section id="add-scores">
                 <h2>Add your score</h2>
-                <form action="#">
+                <form action="#" id="form-data">
                     <input type="text" id="name" placeholder="Your name" required> <br>
                     <input type="number" id="score" placeholder="Your score" required> <br>
                     <button type="submit" id="submit-btn">Submit</button>        

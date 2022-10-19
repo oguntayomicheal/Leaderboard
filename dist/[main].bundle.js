@@ -17565,7 +17565,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "main {\r\n    width: 80%;\r\n    margin: auto; \r\n}\r\n\r\n#container {\r\n    display: flex;\r\n    justify-content: space-between; \r\n}\r\n\r\n#display-scores, #add-scores {\r\n    width: 45%;\r\n}\r\n\r\n#recent {\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n}\r\n\r\n#scores {\r\n    border: 2px solid black;\r\n}\r\n\r\nul {\r\n    list-style: none;\r\n    margin: 0px;\r\n    padding: 0px;\r\n}\r\n\r\n.list:nth-child(odd) {\r\n    background-color: rgb(245, 240, 240);\r\n    padding: 5px;\r\n}\r\n  \r\n.list:nth-child(even) {\r\n    background-color: white;\r\n    padding: 5px;\r\n}\r\n\r\nbutton {\r\n    box-shadow: 2px 2px black;\r\n    padding: 5px 5px;\r\n    height: 30px;\r\n    background-color: white;\r\n}\r\n\r\ninput {\r\n    width: 100%;\r\n    margin-bottom: 20px;\r\n    border: 2px solid black;\r\n}\r\n\r\n@media screen and (max-width: 767px) {\r\n    #display-scores, #add-scores {\r\n        width: 100%;\r\n    }\r\n\r\n    #container {\r\n        display: flex;\r\n        flex-wrap: wrap; \r\n    }\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "main {\r\n  width: 80%;\r\n  margin: auto;\r\n}\r\n\r\n#container {\r\n  display: flex;\r\n  justify-content: space-between;\r\n}\r\n\r\n#display-scores,\r\n#add-scores {\r\n  width: 45%;\r\n}\r\n\r\n#recent {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n}\r\n\r\n#scores {\r\n  border: 2px solid black;\r\n}\r\n\r\nul {\r\n  list-style: none;\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\n.list:nth-child(odd) {\r\n  background-color: rgb(245, 240, 240);\r\n  padding: 5px;\r\n}\r\n\r\n.list:nth-child(even) {\r\n  background-color: white;\r\n  padding: 5px;\r\n}\r\n\r\nbutton {\r\n  box-shadow: 2px 2px black;\r\n  padding: 5px 5px;\r\n  height: 30px;\r\n  background-color: white;\r\n}\r\n\r\ninput {\r\n  width: 100%;\r\n  margin-bottom: 20px;\r\n  border: 2px solid black;\r\n}\r\n\r\n#submit-btn {\r\n  float: right;\r\n}\r\n\r\n@media screen and (max-width: 767px) {\r\n  #display-scores,\r\n  #add-scores {\r\n    width: 100%;\r\n  }\r\n\r\n  #container {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n  }\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -17689,6 +17689,18 @@ module.exports = function (cssWithMappingToString) {
   return list;
 };
 
+/***/ }),
+/* 12 */
+/***/ (() => {
+
+
+
+/***/ }),
+/* 13 */
+/***/ (() => {
+
+
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -17795,7 +17807,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var _modules_addScore_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(12);
+/* harmony import */ var _modules_addScore_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_addScore_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _modules_displayScore_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(13);
+/* harmony import */ var _modules_displayScore_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_displayScore_js__WEBPACK_IMPORTED_MODULE_3__);
 /* eslint-disable */
+
+
+
+
+
+
+
+const formData = document.getElementById('form-data')
+const refreshBtn = document.getElementById('refresh-btn')
+
+const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/rzhYg6cx8k9MVTokTDy0/scores/';
+
+formData.addEventListener('submit', (e) => {
+    e.preventDefault()
+    _modules_addScore_js__WEBPACK_IMPORTED_MODULE_2___default()(url) 
+})
+
+refreshBtn.addEventListener('click', (_modules_displayScore_js__WEBPACK_IMPORTED_MODULE_3___default()))
+
+
+
 
 
 
