@@ -17691,14 +17691,63 @@ module.exports = function (cssWithMappingToString) {
 
 /***/ }),
 /* 12 */
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* eslint-disable */
+const addScore = async (url) => {
+  let name = document.getElementById('name');
+  let score = document.getElementById('score');
 
+  await fetch(url, {
+    method: 'POST',
+    body: JSON.stringify({
+    user: name.value,
+    score: score.value,
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  name.value = ''
+  score.value = ''
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (addScore);
 
 /***/ }),
 /* 13 */
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* eslint-disable */
+const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/rzhYg6cx8k9MVTokTDy0/scores/';
+
+const displayScore = async () => {
+    const showData = document.getElementById('all-scores')
+    const response = await fetch(url);
+    const data = await response.json();
+    const dataArray = data.result
+
+    showData.innerHTML = ''
+
+    dataArray.forEach((element) => {
+        const list = document.createElement('li')
+        list.className = 'list'
+        list.innerText = `${element.user}: ${element.score}`
+        showData.appendChild(list)
+    })
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (displayScore);
 
 
 /***/ })
@@ -17808,10 +17857,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var _modules_addScore_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(12);
-/* harmony import */ var _modules_addScore_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_addScore_js__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _modules_displayScore_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(13);
-/* harmony import */ var _modules_displayScore_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_displayScore_js__WEBPACK_IMPORTED_MODULE_3__);
 /* eslint-disable */
+
 
 
 
@@ -17826,10 +17874,10 @@ const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/game
 
 formData.addEventListener('submit', (e) => {
     e.preventDefault()
-    _modules_addScore_js__WEBPACK_IMPORTED_MODULE_2___default()(url) 
+    ;(0,_modules_addScore_js__WEBPACK_IMPORTED_MODULE_2__["default"])(url) 
 })
 
-refreshBtn.addEventListener('click', (_modules_displayScore_js__WEBPACK_IMPORTED_MODULE_3___default()))
+refreshBtn.addEventListener('click', _modules_displayScore_js__WEBPACK_IMPORTED_MODULE_3__["default"])
 
 
 
