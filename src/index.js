@@ -6,6 +6,7 @@ import './style.css';
 import addScore from "./modules/addScore.js";
 import displayScore from "./modules/displayScore.js";
 
+
 const formData = document.getElementById('form-data')
 const refreshBtn = document.getElementById('refresh-btn')
 
@@ -16,7 +17,6 @@ formData.addEventListener('submit', (e) => {
     addScore(url) 
 })
 
-refreshBtn.addEventListener('click', displayScore)
 
 
 
