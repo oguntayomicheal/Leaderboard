@@ -1,3 +1,7 @@
+body {
+  background-color: #f5f0f0;
+}
+
 main {
   width: 80%;
   margin: auto;
@@ -20,7 +24,10 @@ main {
 }
 
 #scores {
-  border: 2px solid black;
+  border: 2px solid #dcd8d8;
+  overflow: auto;
+  height: 40vh;
+  border-radius: 8px;
 }
 
 ul {
@@ -40,20 +47,27 @@ ul {
 }
 
 button {
-  box-shadow: 2px 2px black;
+  box-shadow: 1px 1px black;
   padding: 5px 5px;
   height: 30px;
-  background-color: white;
+  background-color: #f5f0f0;
+  border-color: #dcd8d8;
+  border-radius: 8px;
 }
 
 input {
   width: 100%;
   margin-bottom: 20px;
-  border: 2px solid black;
+  border: 2px solid #dcd8d8;
+  border-radius: 8px;
 }
 
 #submit-btn {
   float: right;
+}
+
+a {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 767px) {
