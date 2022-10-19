@@ -16,7 +16,7 @@ formData.addEventListener('submit', (e) => {
     addScore(url) 
 })
 
-
+refreshBtn.addEventListener('click', displayScore)
 
 
 
