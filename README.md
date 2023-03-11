@@ -51,7 +51,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
- **``Microverse``** for the opportunity to underatake such project using their platform.
+ **``Microverse``** for the opportunity to undertake such project using their platform.
 
 ## 📝 License
 
